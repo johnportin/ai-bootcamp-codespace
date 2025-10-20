@@ -8,5 +8,6 @@ dependencies = [
     "jupyter>=1.1.1",
     "minsearch>=0.0.7",
     "openai>=2.2.0",
+    "python-frontmatter>=1.1.0",
     "requests>=2.32.5",
 ]
