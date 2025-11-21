@@ -1,0 +1,192 @@
+{
+  "agent_name": "Wiki",
+  "system_prompt": [
+    "\nYou are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.\n"
+  ],
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "tools": [
+    "search_wikipedia_titles",
+    "get_wikipedia_page"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "how many moons does jupiter have?",
+          "timestamp": "2025-11-20T01:25:08.330441+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "62d43162-1c78-46a7-906e-41dcefd7f02b",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "args": "{\"query\":\"Jupiter moons\"}",
+          "tool_call_id": "call_w9FVnY7vCiwx6LdGFeVDI7ln",
+          "id": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 157,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 18,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-20T01:25:08+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-Cdni03Fu4ujar1D49i4drtjKpssWn",
+      "finish_reason": "tool_call",
+      "run_id": "62d43162-1c78-46a7-906e-41dcefd7f02b",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "content": [
+            "Jupiter moons",
+            "Of Jupiter and Moons",
+            "Jupiter Moon",
+            "Jupiter Booster",
+            "Jupiter Mosman"
+          ],
+          "tool_call_id": "call_w9FVnY7vCiwx6LdGFeVDI7ln",
+          "metadata": null,
+          "timestamp": "2025-11-20T01:25:09.714934+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "62d43162-1c78-46a7-906e-41dcefd7f02b",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "get_wikipedia_page",
+          "args": "{\"title\":\"Jupiter moons\"}",
+          "tool_call_id": "call_YbAM4kQhzDwkP98I7VopHZXp",
+          "id": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 209,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 18,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-20T01:25:11+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-Cdni3nl545qSe17p9N2JR9E3cd0V5",
+      "finish_reason": "tool_call",
+      "run_id": "62d43162-1c78-46a7-906e-41dcefd7f02b",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "get_wikipedia_page",
+          "content": "There are 97 moons of Jupiter with confirmed orbits as of 30\u00a0April\u00a02025. This number does not include a number of meter-sized moonlets thought to be shed from the inner moons, nor hundreds of possible kilometer-sized outer irregular moons that were only briefly captured by telescopes. All together, Jupiter's moons form a satellite system called the Jovian system. The most massive of the moons are the four Galilean moons: Io, Europa, Ganymede, and Callisto, which were independently discovered in 1610 by Galileo Galilei and Simon Marius and were the first objects found to orbit a body that was neither Earth nor the Sun. Much more recently, beginning in 1892, dozens of far smaller Jovian moons have been detected and have received the names of lovers or daughters of the Roman god Jupiter or his Greek equivalent Zeus. The Galilean moons are by far the largest and most massive objects to orbit Jupiter, with the remaining 93 known moons and the rings together comprising just 0.003% of the total orbiting mass.",
+          "tool_call_id": "call_YbAM4kQhzDwkP98I7VopHZXp",
+          "metadata": null,
+          "timestamp": "2025-11-20T01:25:11.983326+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "62d43162-1c78-46a7-906e-41dcefd7f02b",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "content": "As of April 30, 2025, Jupiter has a total of 97 confirmed moons. This count does not include smaller moonlets or potential irregular moons that may be present. The most notable moons are the four Galilean moons: Io, Europa, Ganymede, and Callisto, which were discovered in 1610. These moons, along with the remaining 93, make up the Jovian system, with the Galilean moons being significantly larger than the others.\n\nFor further details, you can visit the [Jupiter moons Wikipedia page](https://en.wikipedia.org/wiki/Jupiter_moons).",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 455,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 124,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-20T01:25:12+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-Cdni4KagPgNu0oXFcXT9kdIgpcAn6",
+      "finish_reason": "stop",
+      "run_id": "62d43162-1c78-46a7-906e-41dcefd7f02b",
+      "metadata": null
+    }
+  ],
+  "usage": {
+    "input_tokens": 821,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 160,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "requests": 3,
+    "tool_calls": 2
+  },
+  "output": "As of April 30, 2025, Jupiter has a total of 97 confirmed moons. This count does not include smaller moonlets or potential irregular moons that may be present. The most notable moons are the four Galilean moons: Io, Europa, Ganymede, and Callisto, which were discovered in 1610. These moons, along with the remaining 93, make up the Jovian system, with the Galilean moons being significantly larger than the others.\n\nFor further details, you can visit the [Jupiter moons Wikipedia page](https://en.wikipedia.org/wiki/Jupiter_moons)."
+}

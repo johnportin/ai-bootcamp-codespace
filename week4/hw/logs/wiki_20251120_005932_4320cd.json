@@ -1,0 +1,245 @@
+{
+  "agent_name": "Wiki",
+  "system_prompt": [
+    "\nYou are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.\n"
+  ],
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "tools": [
+    "search_wikipedia_titles",
+    "get_wikipedia_page"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "Where do capybaras live?",
+          "timestamp": "2025-11-20T00:59:26.860485+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "e7ec59d8-f25f-4992-8828-036eb99ab5b7",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "args": "{\"query\":\"capybara habitat\"}",
+          "tool_call_id": "call_JV1Ig0RzWQcblS5fygnYACXQ",
+          "id": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 157,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 19,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-20T00:59:27+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-CdnJ9cljouBUOQm9pgwMhHB3X6rAa",
+      "finish_reason": "tool_call",
+      "run_id": "e7ec59d8-f25f-4992-8828-036eb99ab5b7",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "content": [],
+          "tool_call_id": "call_JV1Ig0RzWQcblS5fygnYACXQ",
+          "metadata": null,
+          "timestamp": "2025-11-20T00:59:28.435097+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "e7ec59d8-f25f-4992-8828-036eb99ab5b7",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "args": "{\"query\":\"capybara\"}",
+          "tool_call_id": "call_2RdjChfFsxuqOuRRj8URKKBA",
+          "id": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 187,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 18,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-20T00:59:29+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-CdnJBqo96R2QF79476jcU1iVglT9x",
+      "finish_reason": "tool_call",
+      "run_id": "e7ec59d8-f25f-4992-8828-036eb99ab5b7",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "content": [
+            "Capybara",
+            "Capybara (software)",
+            "Capybara Games",
+            "Capybara (Sons of Anarchy)",
+            "Capybara Walking"
+          ],
+          "tool_call_id": "call_2RdjChfFsxuqOuRRj8URKKBA",
+          "metadata": null,
+          "timestamp": "2025-11-20T00:59:30.221028+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "e7ec59d8-f25f-4992-8828-036eb99ab5b7",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "get_wikipedia_page",
+          "args": "{\"title\":\"Capybara\"}",
+          "tool_call_id": "call_IUJJkI9avhMtaT9gh2qXHayS",
+          "id": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 248,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 18,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-20T00:59:30+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-CdnJCNMsysySRs1Evoo6uFrb4qZpD",
+      "finish_reason": "tool_call",
+      "run_id": "e7ec59d8-f25f-4992-8828-036eb99ab5b7",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "get_wikipedia_page",
+          "content": "The capybara or greater capybara is the largest living rodent, native to South America. It is a member of the genus Hydrochoerus. Its close relatives include\nguinea pigs and rock cavies, and it is more distantly related to the agouti, the chinchilla, and the nutria. The capybara inhabits savannas and dense forests, and lives near bodies of water. It is a highly social species and can be found in groups as large as one hundred individuals, but usually live in groups of 10\u201320 individuals. The capybara is hunted for its meat and hide and also for grease from its thick fatty skin.",
+          "tool_call_id": "call_IUJJkI9avhMtaT9gh2qXHayS",
+          "metadata": null,
+          "timestamp": "2025-11-20T00:59:31.610546+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "e7ec59d8-f25f-4992-8828-036eb99ab5b7",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "content": "Capybaras, known scientifically as Hydrochoerus hydrochaeris, are the largest living rodents and are native to South America. They typically inhabit savannas and dense forests, preferring areas close to bodies of water such as rivers, lakes, and wetlands. Capybaras are highly social animals, often forming groups that can number from 10 to 20 individuals, but sometimes they can gather in much larger groups of up to 100.\n\nFor more detailed information, you can visit the Wikipedia page on capybaras: [Capybara - Wikipedia](https://en.wikipedia.org/wiki/Capybara).",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 415,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 128,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-20T00:59:32+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-CdnJEaYJsrOMIg2juTJfudnvzpevH",
+      "finish_reason": "stop",
+      "run_id": "e7ec59d8-f25f-4992-8828-036eb99ab5b7",
+      "metadata": null
+    }
+  ],
+  "usage": {
+    "input_tokens": 1007,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 183,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "requests": 4,
+    "tool_calls": 3
+  },
+  "output": "Capybaras, known scientifically as Hydrochoerus hydrochaeris, are the largest living rodents and are native to South America. They typically inhabit savannas and dense forests, preferring areas close to bodies of water such as rivers, lakes, and wetlands. Capybaras are highly social animals, often forming groups that can number from 10 to 20 individuals, but sometimes they can gather in much larger groups of up to 100.\n\nFor more detailed information, you can visit the Wikipedia page on capybaras: [Capybara - Wikipedia](https://en.wikipedia.org/wiki/Capybara)."
+}

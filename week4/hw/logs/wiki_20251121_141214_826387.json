@@ -1,0 +1,192 @@
+{
+  "agent_name": "Wiki",
+  "system_prompt": [
+    "\nYou are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.\n"
+  ],
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "tools": [
+    "search_wikipedia_titles",
+    "get_wikipedia_page"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "Tell me something about math?",
+          "timestamp": "2025-11-21T14:12:07.097150+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "cb5f6bd1-cf65-4318-a400-57f689b68382",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "args": "{\"query\":\"Mathematics\"}",
+          "tool_call_id": "call_eda8JMJUGjOt3QZUuvelv7l0",
+          "id": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 155,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 18,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-21T14:12:08+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-CeM9oeiwnUuJY33dcSmIj1h0RM5kR",
+      "finish_reason": "tool_call",
+      "run_id": "cb5f6bd1-cf65-4318-a400-57f689b68382",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "content": [
+            "Mathematics",
+            "Mathematics education",
+            "Mathematics in the medieval Islamic world",
+            "Mathematics and art",
+            "Mathematics and architecture"
+          ],
+          "tool_call_id": "call_eda8JMJUGjOt3QZUuvelv7l0",
+          "metadata": null,
+          "timestamp": "2025-11-21T14:12:09.601320+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "cb5f6bd1-cf65-4318-a400-57f689b68382",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "get_wikipedia_page",
+          "args": "{\"title\":\"Mathematics\"}",
+          "tool_call_id": "call_09ai5HviaTEn5Vb864UuE6FJ",
+          "id": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 214,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 18,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-21T14:12:11+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-CeM9rFrLmuPspoxGO39fgBWxYS07T",
+      "finish_reason": "tool_call",
+      "run_id": "cb5f6bd1-cf65-4318-a400-57f689b68382",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "get_wikipedia_page",
+          "content": "Mathematics is a field of study that discovers and organizes methods, theories, and theorems that are developed and proved for the needs of empirical sciences and mathematics itself. There are many areas of mathematics, which include number theory, algebra, geometry, analysis, and set theory.",
+          "tool_call_id": "call_09ai5HviaTEn5Vb864UuE6FJ",
+          "metadata": null,
+          "timestamp": "2025-11-21T14:12:12.824746+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "cb5f6bd1-cf65-4318-a400-57f689b68382",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "content": "Mathematics is a discipline focused on discovering and organizing methods, theories, and theorems, which are developed and proven to meet the needs of both empirical sciences and the field of mathematics itself. It encompasses various areas, including number theory, algebra, geometry, analysis, and set theory.\n\nFor more detailed information, you can visit the Wikipedia page on Mathematics: [Mathematics](https://en.wikipedia.org/wiki/Mathematics).",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 299,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 90,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-21T14:12:14+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-CeM9uxmNwhASNUeQjP7HauaeMEAQk",
+      "finish_reason": "stop",
+      "run_id": "cb5f6bd1-cf65-4318-a400-57f689b68382",
+      "metadata": null
+    }
+  ],
+  "usage": {
+    "input_tokens": 668,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 126,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "requests": 3,
+    "tool_calls": 2
+  },
+  "output": "Mathematics is a discipline focused on discovering and organizing methods, theories, and theorems, which are developed and proven to meet the needs of both empirical sciences and the field of mathematics itself. It encompasses various areas, including number theory, algebra, geometry, analysis, and set theory.\n\nFor more detailed information, you can visit the Wikipedia page on Mathematics: [Mathematics](https://en.wikipedia.org/wiki/Mathematics)."
+}

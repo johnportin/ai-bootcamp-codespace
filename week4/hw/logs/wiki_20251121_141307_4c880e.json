@@ -1,0 +1,192 @@
+{
+  "agent_name": "Wiki",
+  "system_prompt": [
+    "\nYou are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.\n"
+  ],
+  "provider": "openai",
+  "model": "gpt-4o-mini",
+  "tools": [
+    "search_wikipedia_titles",
+    "get_wikipedia_page"
+  ],
+  "messages": [
+    {
+      "parts": [
+        {
+          "content": "Tell me something about math?",
+          "timestamp": "2025-11-21T14:13:03.121790+00:00",
+          "part_kind": "user-prompt"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "8a16a328-fe07-4e87-bc37-5e122f2a1f6e",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "args": "{\"query\":\"Mathematics\"}",
+          "tool_call_id": "call_r8ezuSPcP8saTVxrUwbPRaGx",
+          "id": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 155,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 18,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-21T14:13:04+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-CeMAi0NiqIwWvqgmTx8mWjmpuG9jA",
+      "finish_reason": "tool_call",
+      "run_id": "8a16a328-fe07-4e87-bc37-5e122f2a1f6e",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "search_wikipedia_titles",
+          "content": [
+            "Mathematics",
+            "Mathematics education",
+            "Mathematics in the medieval Islamic world",
+            "Mathematics and art",
+            "Mathematics and architecture"
+          ],
+          "tool_call_id": "call_r8ezuSPcP8saTVxrUwbPRaGx",
+          "metadata": null,
+          "timestamp": "2025-11-21T14:13:05.734705+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "8a16a328-fe07-4e87-bc37-5e122f2a1f6e",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "get_wikipedia_page",
+          "args": "{\"title\":\"Mathematics\"}",
+          "tool_call_id": "call_fZFkdEYxappIbBmDZYmdziVN",
+          "id": null,
+          "part_kind": "tool-call"
+        }
+      ],
+      "usage": {
+        "input_tokens": 214,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 18,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-21T14:13:06+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "tool_calls"
+      },
+      "provider_response_id": "chatcmpl-CeMAkgwhWlm4yVQOWme1jJlFhMYMO",
+      "finish_reason": "tool_call",
+      "run_id": "8a16a328-fe07-4e87-bc37-5e122f2a1f6e",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "tool_name": "get_wikipedia_page",
+          "content": "Mathematics is a field of study that discovers and organizes methods, theories, and theorems that are developed and proved for the needs of empirical sciences and mathematics itself. There are many areas of mathematics, which include number theory, algebra, geometry, analysis, and set theory.",
+          "tool_call_id": "call_fZFkdEYxappIbBmDZYmdziVN",
+          "metadata": null,
+          "timestamp": "2025-11-21T14:13:06.805363+00:00",
+          "part_kind": "tool-return"
+        }
+      ],
+      "instructions": "You are a Wikipedia research assistant. ALWAYS use the tools to gather information.\n\nWorkflow:\n1. Use search_wikipedia_titles(query) to find relevant candidate pages.\n2. Select the single most relevant title.\n3. Use get_wikipedia_page(title) to fetch the summary.\n4. Summarize clearly in under 500 words. \n\nAlways cite the url in the repsonse. Do not use emojis.",
+      "kind": "request",
+      "run_id": "8a16a328-fe07-4e87-bc37-5e122f2a1f6e",
+      "metadata": null
+    },
+    {
+      "parts": [
+        {
+          "content": "Mathematics is a discipline that focuses on the discovery, organization, and proof of theories, methods, and theorems that serve both the needs of empirical sciences and its own development. Key areas within mathematics include number theory, algebra, geometry, analysis, and set theory. Each of these branches explores different aspects of numbers, shapes, and abstract concepts, contributing to the overall framework of mathematical knowledge. Mathematics plays a crucial role in numerous fields, including science, engineering, economics, and social sciences, highlighting its universal application and significance.\n\nFor more detailed information, you can visit the full article on Wikipedia: [Mathematics](https://en.wikipedia.org/wiki/Mathematics).",
+          "id": null,
+          "part_kind": "text"
+        }
+      ],
+      "usage": {
+        "input_tokens": 299,
+        "cache_write_tokens": 0,
+        "cache_read_tokens": 0,
+        "output_tokens": 139,
+        "input_audio_tokens": 0,
+        "cache_audio_read_tokens": 0,
+        "output_audio_tokens": 0,
+        "details": {
+          "accepted_prediction_tokens": 0,
+          "audio_tokens": 0,
+          "reasoning_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "model_name": "gpt-4o-mini-2024-07-18",
+      "timestamp": "2025-11-21T14:13:07+00:00",
+      "kind": "response",
+      "provider_name": "openai",
+      "provider_details": {
+        "finish_reason": "stop"
+      },
+      "provider_response_id": "chatcmpl-CeMAlo14ldMvljkFWJv0gvtHUF3XM",
+      "finish_reason": "stop",
+      "run_id": "8a16a328-fe07-4e87-bc37-5e122f2a1f6e",
+      "metadata": null
+    }
+  ],
+  "usage": {
+    "input_tokens": 668,
+    "cache_write_tokens": 0,
+    "cache_read_tokens": 0,
+    "output_tokens": 175,
+    "input_audio_tokens": 0,
+    "cache_audio_read_tokens": 0,
+    "output_audio_tokens": 0,
+    "details": {
+      "accepted_prediction_tokens": 0,
+      "audio_tokens": 0,
+      "reasoning_tokens": 0,
+      "rejected_prediction_tokens": 0
+    },
+    "requests": 3,
+    "tool_calls": 2
+  },
+  "output": "Mathematics is a discipline that focuses on the discovery, organization, and proof of theories, methods, and theorems that serve both the needs of empirical sciences and its own development. Key areas within mathematics include number theory, algebra, geometry, analysis, and set theory. Each of these branches explores different aspects of numbers, shapes, and abstract concepts, contributing to the overall framework of mathematical knowledge. Mathematics plays a crucial role in numerous fields, including science, engineering, economics, and social sciences, highlighting its universal application and significance.\n\nFor more detailed information, you can visit the full article on Wikipedia: [Mathematics](https://en.wikipedia.org/wiki/Mathematics)."
+}
